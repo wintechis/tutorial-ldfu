@@ -1,0 +1,13 @@
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT *
+WHERE {
+  # P54: 	member of sports team
+  # P413:	position
+  # P495:	nationality
+  # Q514676,acutally Q704524: Nürnberg Ice Tigers (solution wrong)
+  ?player wd:P54    wd:Q514676 ;
+          foaf:name ?name ;
+          wd:P413   ?position .
+}
